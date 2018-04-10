@@ -1,0 +1,24 @@
+/*Esto corresponderia al diseño de la parte izquierda del 
+  cuerpo de la pantalla "Almacen_BD.html",el cual se le 
+  ha colocado el "ID = div1".
+  Aqui hay opciones como :   - Configuracion de variables
+*/
+
+ #div1{
+   background-color: rgb(35, 100, 136);
+   padding-bottom  : 15px;
+   }
+ #Seleccion_tareas{
+   margin-top      : 12px;
+   margin-bottom   : 12px;
+   font-size       : 17px;
+   color           : #15FFCB; /*Color turquesa*/
+   font-weight     : bolder;
+   text-align      : center;
+     }
+ .nav-pills> li > a {
+   color           : rgb(239, 254, 2);/*Color amarillo el texto por defecto*/
+      } 
+ .nav-pills> li > a:hover{
+   background-color: rgb(239, 3, 2);/*Color rojo cuando el mouse pasa por encima*/
+    }

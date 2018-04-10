@@ -1,0 +1,14 @@
+/*Esto es el equivalente de Pie_1.css*/
+ #Linea_inferior{
+    position: fixed;/*Fija la posicion respecto del viewport osea de la pagina web*/
+  	bottom: 0%;
+  	/*left: 0%;*/
+  	width: 100%;
+  	font-size: 85%;
+  	background-color: #98ADC8;	
+  	color: #FFF;
+    text-align: center;
+    }
+  #Datos_autor{
+    margin-bottom: 0px;
+    }

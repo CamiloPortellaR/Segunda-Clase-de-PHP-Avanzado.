@@ -1,0 +1,378 @@
+<!-------------------------------------- Esto es parte de la cabezera -------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Fireno Mtto</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Archivo de estilos Cabezera.css -->
+  <link rel="stylesheet" href="Cabezera_0.css"/>
+  <!-- Archivo de estilos Pie de Pagina.css -->
+  <link rel="stylesheet" href="Cabezera_1.css"/>
+  
+  <!-- Archivo personalizados -->
+  <link rel="stylesheet" href="Creacion_de_Reporte_1.css"/>
+  <link rel="stylesheet" href="Creacion_de_Reporte_2.css"/>
+  
+ </head>
+
+    <body>
+    	
+    	<div class= "container-fluid">
+    		
+          <div class="row" id="Linea_superior">
+ 	
+              <div class="col-xs-5"><!--Las dimensiones de los padding y de los margin se han ajustado de tal forma que empalme con la segunda columna que contiene la foto-->
+                   <p id= "linea_superior_usuario">        Usuario HOLA   </p>
+                   <p id="linea_superior_usuario_echo">    Usuario HOLA   </p>
+                   <p id="linea_superior_privilegio">      Usuario HOLA   </p>
+                   <p id="linea_superior_privilegio_echo"> Usuario HOLA   </p>
+              </div>
+    
+              <div class="col-xs-5"><!--Esta foto es la que estamos usando como referencia y es de 85px x 85px , las dimensiones correspondientes a las otras columnas se han tomado a partir de esta columna que contiene la imagen-->
+                  <img src="hitler.gif" id="Imagen" class="img-responsive img-circle">
+              </div>
+    
+              <div class="col-xs-2">
+                 <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Salir">
+                     <span class="glyphicon glyphicon-log-out"></span>
+                 </button>
+              </div>
+    
+          </div>
+   <!-------------------------------------- Aqui finaliza la cabezera -------------------------------------------------->
+
+
+   <!-------------------------------------- Esto es parte de la cuerpo -------------------------------------------------->
+
+       <div class="row" id="Linea_de_cuerpo">
+       	
+       	     <!-- Este row ha sido divido en 2 franjas verticales con los sgts id:
+        	      div1 = Este contiene el menu de opciones.
+			      div2 = Este contiene el contenido de cada una de las opciones del menu,
+			             las cuales puede contener titulos,formularios, tablas etc.  --->
+
+             <!-- Menu de opciones  div1 -->
+             <div id="div1" class="col-sm-3">
+
+ 	              <ul class="nav nav-pills nav-stacked">
+ 		              <li id="Seleccion_tareas">Seleccione Tarea</li>
+ 		              <li><a data-toggle="pill" href="#revision_de_reportes_hidrostaticos"><b>Revision de Reporte</b></a></li>
+ 		              <li><a data-toggle="pill" href="#creacion_de_reportes_hidrostaticos"><b>Creacion de Reporte</b></a></li>
+ 		              <li><a data-toggle="pill" href="#actualizacion_de_reportes_hidrostaticos"><b>Actualizacion de Reporte</b></a></li>
+                  </ul>
+
+ 	         </div>
+ 	         
+ 	         <!-- Aqui se muestra el contenido de las opcion elegida en div1 -->
+ 	         <div id="div2" class="col-sm-9 tab-content">
+ 	         	
+ 	         	 <!-- Este menu estara compuesto de varias partes como :
+ 	        	 	  Titulo  --  Formulario   -- Mensajes  --  Tabla          -->
+ 	         	  <div  id="revision_de_reportes_hidrostaticos" class="tab-pane fade">
+ 	         		
+ 	         		 <!-- Este row me servira para crear un espacio que permita que el final de la tabla se pueda visualizar -->   
+ 	             	  <div class="row" style="visibility: hidden">
+ 	             	     	final de tabla
+ 	             	  </div>
+ 	             	  <div class="row" style="visibility: hidden">
+ 	             	     	final de tabla
+ 	             	  </div>
+ 	             	 
+ 	              </div>
+ 	              
+ 	              <!--------------------------------------------------------------------------------------------------------------------------------- -->
+ 	              
+ 	              <div  id="creacion_de_reportes_hidrostaticos" class="tab-pane fade">
+ 	              	
+ 	              	
+ 	              	<div class="container-fluid" style="text-align: center">
+ 	              	<div class="row" id="Creacion_RH_titulo">
+ 	             		<h1>CREACION DE REPORTE</h1>
+ 	             	 </div>
+ 	         	    </div>
+ 	         	
+ 	         	 <div class="container-fluid">
+ 	         	
+ 	         	    <div class="row" id="Creacion_RH_formulario">
+ 	         		
+ 	         		      <div id="Creacion_RH_orden_de_trabajo" style="text-align: center">
+ 	             	 	     <label >Seleccione la OT :</label>
+                             <select class="form-control" style="/* width: 55%; */margin: auto;width: 250px;">
+                               <!---Aqui se cargan las OT DISPONIBLES, osea las que aun no se han ejecutado :- -->
+                               <option value="PL001">CX_15</option>
+                               <option value="PL002">CX_11</option>
+                               <option value="PL003">AX_08</option>
+                               <option value="PL004">CX_20</option>
+                             </select>
+ 	                      </div>
+ 	                      
+ 	                    <!--  <div class="col-sm-offset-3 col-sm-6" id="actualizar_registro_configuracion_linealizacion_titulacion_y_alarmas"><button class="btn btn-default">Guardar Registro</button></div>-->
+ 	         	
+ 	         	        <div id="actualizar_registro_configuracion_linealizacion_titulacion_y_alarmas" style="text-align: center;margin-top: 15px;">
+ 	         	        	     <button class="btn btn-default" style="width: 250px;">Guardar Registro</button>
+ 	         	        </div>
+ 	         	
+ 	         
+ 	         		</div>
+ 	         		
+ 	         		</div>
+ 	         		
+ 	         		<div class="container-fluid" style="margin-top: 15px;background-color: #c0c1c3;">
+ 	         			
+ 	         			<div class="row" style=""> 
+ 	         				<div class="well well-sm" style="text-align: center; margin-bottom: 0px;">Formulario</div>
+ 	         			</div>
+ 	         			
+ 	         			<div class="row" style="padding-top: 15px;">
+ 	         				
+ 	         				<div class="col-xs-8 col-xs-offset-3 col-sm-4 col-sm-offset-2  col-md-3 col-md-offset-2 col-lg-2 col-lg-offset-1" id="Creacion_RH_fecha_prueba">
+                                <label>Fecha de la Prueba:</label>
+                   	            <input type="date" class="form-control">
+                            </div>
+ 	         		
+ 	         		        <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1" id="Creacion_RH_supervisor_de_prueba" >
+                                <label>Supervisor de Prueba:</label>
+                                <input type="text" class="form-control" placeholder="Nombre del supervisor ....."> 
+                            </div>
+ 	         		
+ 	         		        <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1" id="Creacion_RH_tecnico_de_prueba" >
+                               <label>Tecnico de Prueba:</label>
+                               <input type="text" class="form-control" placeholder="Nombre del tecnico ....."> 
+                            </div>
+                              
+                         </div>
+                           
+                           <div class="row" style="padding-top: 25px;">   
+                              
+                          <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-1" id="Creacion_RH_estado_soldadura">
+                             <label>Estado de Soldadura :</label><br/>
+                             <label>
+                               <input type="radio" name="Creacion_RH_estado_soldadura_bueno_malo" checked>Bueno
+                             </label><br/>
+                             <label>
+                               <input type="radio" name="Creacion_RH_estado_soldadura_bueno_malo">Malo
+                             </label><br/>
+                          </div>
+                    
+                          <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-1" id="Creacion_RH_estado_roscas">
+                             <label>  Estado de Roscas :</label><br/>
+                             <label>
+                               <input type="radio" name="Creacion_RH_estado_roscas_bueno_malo" checked>Bueno
+                             </label><br/>
+                             <label>
+                               <input type="radio" name="Creacion_RH_estado_roscas_bueno_malo">Malo
+                             </label><br/>   
+                          </div>
+                    
+                          <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-1" id="Creacion_RH_inspeccion_interna">
+                                <label>Inspeccion Interna :</label><br/>
+                                <label>
+                                  <input type="radio" name="Creacion_RH_inspeccion_interna_bueno_malo" checked>Bueno
+                                </label><br/>
+                                <label>
+                                   <input type="radio" name="Creacion_RH_inspeccion_interna_bueno_malo">Malo
+                                </label><br/>   
+                          </div>
+                    
+                          <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0 col-lg-2 col-lg-offset-1" id="Creacion_RH_inspeccion_externa">
+                                <label>Inspeccion Externa :</label><br/>
+                                <label>
+                                   <input type="radio" name="Creacion_RH_inspeccion_externa_bueno_malo" checked>Bueno
+                                </label><br/>
+                                <label>
+                                   <input type="radio" name="Creacion_RH_inspeccion_externa_bueno_malo">Malo
+                                </label><br/>   
+                          </div>
+                    
+                         </div>
+                         
+                         <div class="row">
+                    
+ 	         		
+ 	         		      <div class="col-xs-9 col-xs-offset-3 col-sm-4 col-sm-offset-2  col-md-3 col-md-offset-2 col-lg-2 col-lg-offset-2" id="Creacion_RH_inicio_de_prueba">
+                               <label>Inicio de Prueba:</label>
+                   	           <input type="time" class="form-control">
+                          </div>
+                    
+                          <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 col-lg-2 col-lg-offset-1" id="Creacion_RH_duracion_de_prueba">
+                               <label>Duracion de Prueba:</label>
+                               <input type="text" class="form-control" placeholder="en segundos ...."> 
+                          </div>
+                              
+                          <div class="col-xs-10 col-xs-offset-1  col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-2 col-lg-2 col-lg-offset-1" id="Creacion_RH_medio_de_prueba">
+ 	             	 	        <label>Medio de Prueba:</label>
+                                <select class="form-control">
+                                   
+                                   <option value="PL001">CX_15</option>
+                                   <option value="PL002">CX_11</option>
+                                   <option value="PL003">AX_08</option>
+                                   <option value="PL004">CX_20</option>
+                                </select>                  
+ 	                      </div>    
+                            
+                            </div>
+                            
+                            
+                         <div class="row">
+                              
+                          <div class="col-xs-10 col-xs-offset-1  col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-0 col-lg-4 col-lg-offset-2" id="Creacion_RH_observaciones">
+                               <label>Observaciones:</label>
+                               <textarea rows="3" class="form-control" placeholder="max 300 caracteres..."></textarea>
+                          </div>
+                              
+                          <div class="col-sm-6 col-lg-2 col-lg-offset-1" id="Creacion_RH_cargar_reporte">
+ 	             	 	       <label>Cargue el Reporte :</label><br/>
+ 	             	 	       <input type="file"><br>
+ 	             	 	       <p style="display: none">imagen vacia</p>
+ 	             	 	  </div>  
+ 	         				
+ 	         			</div>
+ 	         		</div>
+ 	         		
+
+ 	         		<div class="container-fluid" style="background-color: #bbbbbb;margin-top: 15px;">
+ 	         			
+ 	         			<div class="row" style=""> <div class="well well-sm" style="text-align: center; margin-bottom: 0px;">Imagenes</div></div>
+ 	         		
+ 	         		  <div class="row" id="Monitoreo_de_Plantas_imagenes">
+ 	         		  	
+        	     	      <div>
+        	     		    <figure>
+        	     			  <img src="CX15.png"/>
+        	     		    </figure>
+        	     		    <input type="file"/>
+        	     	      </div>
+        	     	      
+        	     	      <div >
+        	     		    <figure>
+        	     		      <img src="CX11.png"/>
+        	     		    </figure>
+        	     		    <input type="file"/>
+        	     	      </div>
+        	     	      
+        	     	  </div>
+        	     	
+        	     	
+        	     	  <div class="row" style="text-align:center;margin-top: 20px;">
+        	     	  	
+ 	         		     <div class="col-sm-6 " style="    padding-bottom: 10px;">
+ 	         		  	   <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Agregar imagen">
+                              <span class="glyphicon glyphicon-plus-sign"></span> Añadir Imagen
+                           </button>
+                         </div>
+                         
+                         <div class="col-sm-6" style="padding-bottom: 10px;">
+ 	         		       <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Eliminar ultima imagen">
+                             <span class="glyphicon glyphicon-remove-sign"></span> Eliminar ultima Imagen
+                           </button>
+                         </div>
+                         
+        	          </div >
+        	     	
+        	        </div>
+        	      
+        		     
+        	    <div class="container-fluid" style="background-color: #aaaaaa;margin-top: 15px;">
+        	     	
+        	     	<div class="row" style=""> <div class="well well-sm" style="text-align: center; margin-bottom:0px;">Pruebas</div></div>
+        	     	
+ 	         			<div  class="row" style="overflow-x:auto;">
+ 	         			<table id="customers" style="white-space:nowrap;">
+							  <tr>
+							    <th>Nro de Prueba</th>
+							    <th>Presion de Trabajo</th>
+							    <th>Presion de 	Prueba</th>
+							    <th>Presion Final</th>
+							    <th>Temp. Ambiente</th>
+							    <th>Aprobado</th>
+							  </tr>
+							  <tr>
+							    <td>1</td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><select class="form-control">
+							    	<option>1</option>
+							    	<option>2</option>
+							    	</select></td>
+							  </tr>
+							 <tr>
+							    <td>1</td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><input type="text" class="form-control" placeholder="en psi ....."/></td>
+							    <td><select class="form-control">
+							    	<option>1</option>
+							    	<option>2</option>
+							    	</select></td>
+							  </tr>
+						</table>
+					  </div>
+					  
+					  <div class="row" style="text-align: center; margin-top: 10px;">
+ 	         		 <div class="col-sm-6" style="padding-bottom: 10px;">
+ 	         		  	<button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Salir">
+                           <span class="glyphicon glyphicon-plus-sign"></span> Añadir Prueba
+                        </button>
+                     </div>
+                     <div class="col-sm-6" style="padding-bottom: 10px;">
+ 	         		    <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Salir">
+                           <span class="glyphicon glyphicon-remove-sign"></span> Eliminar Ultima Prueba
+                        </button>
+                     </div>
+        	     </div >
+					  
+ 	         		</div>
+ 	         		
+ 	         		 <!-- Este row me servira para crear un espacio que permita que el final de la tabla se pueda visualizar -->   
+ 	             	  <div class="row" style="visibility: hidden">
+ 	             	     	final de tabla
+ 	             	  </div>
+ 	             	  <div class="row" style="visibility: hidden">
+ 	             	     	final de tabla
+ 	             	  </div>
+ 	             	 
+ 	                 
+ 	              </div><!-- Aqui finaliza Creacion de Reportes Hidrostaticos -->   
+ 	              
+ 	              <!--------------------------------------------------------------------------------------------------------------------------------- -->
+ 	              
+ 	              <div  id="actualizacion_de_reportes_hidrostaticos" class="tab-pane fade">
+ 	         		hola3
+ 	         		 <!-- Este row me servira para crear un espacio que permita que el final de la tabla se pueda visualizar -->   
+ 	             	  <div class="row" style="visibility: hidden">
+ 	             	     	final de tabla
+ 	             	  </div>
+ 	             	  <div class="row" style="visibility: hidden">
+ 	             	     	final de tabla
+ 	             	  </div>
+ 	             	 
+ 	              </div>
+ 	         	
+ 	         </div>
+ 	         
+       </div>
+        	     
+        	   
+   <!-------------------------------------- Aqui finaliza el cuerpo ----------------------------------------------------->
+
+
+
+   <!-------------------------------------- Esto es parte del pie  -------------------------------------------------->
+              <div class="row" id="Linea_inferior">
+	              <p id="Datos_autor">&copy; Copyright  by Tasami SAC</p>
+              </div> 
+
+         </div> <!---- finalizacion de <div class=" container-fluid">  -->
+
+    </body> 
+    
+</html>
+ <!-------------------------------------- Aqui finaliza el pie --------------------------------------------------> 

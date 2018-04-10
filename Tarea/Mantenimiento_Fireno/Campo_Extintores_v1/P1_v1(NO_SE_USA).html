@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Camilo</title>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+    
+  #hola{
+      background-color: #ffd800;  
+    }  
+    #hola1{
+      background-color: #f00;  
+    }  
+    
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>City Gallery</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="#">London</a></li>
+    <li><a href="#">Paris</a></li>
+    <li><a href="#">Tokyo</a></li>
+  </ul>
+</nav>
+
+    <div>
+        <button onclick="myFunction()">añadir</button>
+        <button onclick="eliminar()">eliminar</button>
+        <button onclick="revisar()">eliminar</button>
+        <div id="grupo">
+       <div id="hola">
+         <img src="smiley.gif" alt="Smiley face" id="dibujo1">
+          Select a file: <input type="file" name="img" id="imagen1">
+       </div>
+        <div id="hola1">
+         <img src="smiley.gif" alt="Smiley face" id="dibujo2">
+          Select a file: <input type="file" name="img" id="imagen2">
+       </div>
+            </div>
+    </div>
+
+<footer>Copyright &copy; W3Schools.com</footer>
+
+</div>
+    <script>
+
+        function habilitar_imagen() {
+            var iiinput = window.document.querySelectorAll("#grupo > div");
+            //iiinput.addEventListener("change", previewFile_planta);
+
+            for (var i = 0; i < iiinput.length; i++) {
+                iiinput[i].querySelector("input").addEventListener("change", previewFile_planta);
+            }
+        }
+
+        habilitar_imagen();
+        /*
+        var selector_filas_plantas = window.document.querySelectorAll("#Plantas_tabla tbody>tr");
+        for (var i=0;i<selector_filas_plantas.length;i++){
+        selector_filas_plantas[i].addEventListener("click",click_fila_planta);
+        }
+        */
+
+        function revisar() {
+            var ff = window.document.querySelector("#imagen1").attributes;
+            console.log(ff);
+        }
+
+        //Este evento se activara cuando sea cargado una imagen de una planta en <input type="file">.
+
+
+        window.document.querySelector("#dibujo1").addEventListener("click", previewFile);
+
+        function previewFile() {
+            console.log("holla");
+        }
+
+        function previewFile_planta() {
+
+            var file = this.files[0]; // Selecciona el atributo "files[0]" del objeto  <input type="file">
+
+            if (file) {
+                //var preview = document.querySelector("#dibujo1"); //Selecciona el objeto <img>
+                var preview = this.parentNode.querySelector("img"); //Selecciona el objeto <img>
+                //var file = this.files[0]; // Selecciona el atributo "files[0]" del objeto  <input type="file">
+
+
+                // Este objeto pertenece a un API de HTML 5 que nos permite trabajar con files.
+                var reader = new FileReader();
+
+                //if (file) {
+                reader.readAsDataURL(file);
+                //} else {
+                // return;
+                //preview.src = "";
+
+
+                reader.onloadend = function () {  // OJO: ES IMPORTATE QUE OBSERVE COMO ESTA FUNCION PUEDE TOMAR VARIABLES LOCALES DE OTRA FUNCION.
+                    preview.src = reader.result;      // YA QUE ESTA FUNCION CUANDO SEA INVOCADA, LA FUNCION QUE CONTIENE ESAS VARIABLES YA ESTE MUERTA.
+                };
+            }
+
+            // La sgt linea sirve como indicador para considerar o no el envio del file en el submit,si bien 
+            // esta sentencia no tiene que ver nada con la "previsualizacion" de una imagen, pero sera usada
+            // posteriormente.
+            // window.document.querySelector("#planta_imagen_planta > p").innerHTML = "imagen disponible";//Esta
+            //variable solo puede tomar 2 valores "imagen disponible" o "imagen vacia".   
+        }
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        function myFunction() {
+            var list = document.getElementById("grupo");
+            var divv = document.createElement("div");
+            var iimg = document.createElement("img");
+            var ttext = document.createTextNode("Select a file: ");
+            var iinput = document.createElement("input");
+            iinput.setAttribute("type", "file");
+            iinput.addEventListener("change", previewFile_planta);
+            divv.appendChild(iimg);
+            divv.appendChild(ttext);
+            divv.appendChild(iinput);
+            list.appendChild(divv);
+
+            /*
+            var h1 = document.getElementsByTagName("H1")[0];   // Get the first <h1> element in the document
+            var att = document.createAttribute("class");       // Create a "class" attribute
+            att.value = "democlass";                           // Set the value of the class attribute
+            h1.setAttributeNode(att);                          // Add the class attribute to <h1>
+
+            */
+
+            //list.innerHTML += '<div>' + '<img src="smiley.gif" alt="Smiley face">' + 'Select a file: <input type="file" name="img">' + '</div>';
+            var cant_fotos = window.document.querySelectorAll("#grupo > div");
+            console.log(cant_fotos.length);
+            //darlisteners();
+
+        }
+        function eliminar() {
+            var list = document.getElementById("grupo");
+            list.removeChild(list.lastElementChild);
+            var cant_fotos = window.document.querySelectorAll("#grupo > div");
+            console.log(cant_fotos.length);
+            //darlisteners();
+        }
+</script>
+</body>
+</html>

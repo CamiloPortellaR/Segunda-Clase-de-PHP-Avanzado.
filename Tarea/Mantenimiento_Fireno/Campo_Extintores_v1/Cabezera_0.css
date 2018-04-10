@@ -1,0 +1,62 @@
+body{
+	/*background-image:url("Imagen_de_fondo.png");*/
+}
+/*Esto es el equivalente de Cabezera_1.css*/
+#Linea_superior{
+  	/*margin-left : 0px;    ESTO NO TENIA POR QUE SER MODIFICADO ASI QUE POR ESO LO COMENTAMOS*/
+    /* margin-right: -30px; ESTO NO TENIA POR QUE SER MODIFICADO ASI QUE POR ESO LO COMENTAMOS*/
+  	padding-top: 1%;
+  	padding-bottom: 1%;
+  	padding-top: 3px;
+  	padding-bottom: 3px;	
+  	background-color: rgba(12, 16, 44, 0.9);   
+  }
+ #Linea_superior > div:nth-child(1){
+ 	padding-top: 8px;
+ }
+  #Linea_superior > div:nth-child(3){
+ 	padding-top: 29px;
+ }
+  #Linea_superior > div:nth-child(3) button:hover{
+    color: #ffffff;
+    background-color: #473dff;
+    border-color: #0003ff;
+   }
+  #Linea_superior > div:nth-child(3) button{
+ 	color: #ffffff;
+    background-color: #ce2121;
+    border-color: #ff0f0f;
+ }
+ #Imagen{
+    border-style: inset; /*Estilo del borde*/
+  	border-color: rgb(0, 209, 254); 
+  	border-width: 2.2px;
+  }
+  #linea_superior_usuario{
+  	font-size: 90%; 
+  	padding-bottom: 0%; 
+  	margin-bottom: 0px; 
+  	font-weight: bold; 
+  	color: rgb(35, 225, 240);
+  }
+  #linea_superior_usuario_echo{
+  	font-size: 90%; 
+  	padding-bottom: 0%; 
+  	font-style: oblique; 
+  	color: rgb(239, 254, 2); 
+  	margin-bottom: 8px;
+  }
+  #linea_superior_privilegio{
+  	font-size: 90%; 
+  	padding-bottom: 0%; 
+  	margin-bottom: 0px;
+  	font-weight: bold;
+  	color: rgb(35, 225, 240);
+  }
+  #linea_superior_privilegio_echo{
+  	font-size: 90%; 
+  	padding-bottom: 0%; 
+  	font-style: oblique;
+  	color: rgb(239, 254, 2); 
+  	margin-bottom: 0%;
+  }
